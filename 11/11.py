@@ -8,15 +8,15 @@ monkeys = {}
 
 monkey_id = 0
 line_id = 0
-monkey_temp = {"inspect" : 0}
+monkey_temp = {"inspect": 0}
 for line in lines:
-#for line in test_inputs:
+    # for line in test_inputs:
     line = line.replace("\n", "")
 
     if line == "":
         monkeys[monkey_id] = monkey_temp
         monkey_id += 1
-        monkey_temp = {"inspect" : 0}
+        monkey_temp = {"inspect": 0}
         line_id = 0
         continue
 
@@ -39,7 +39,8 @@ for i in range(20):
     for mon in monkeys:
         operation = monkeys[mon]["operation"]
         if operation[6] == "*":
-            ope = lambda a: ((a if (operation[5]) == "old" else int(operation[5])) * (a if operation[7] == "old" else int(operation[7])))
+            ope = lambda a: ((a if (operation[5]) == "old" else int(operation[5])) * (
+                a if operation[7] == "old" else int(operation[7])))
         else:
             ope = lambda a: ((a if operation[5] == "old" else int(operation[5])) + (
                 a if operation[7] == "old" else int(operation[7])))
@@ -67,15 +68,15 @@ monkeys = {}
 
 monkey_id = 0
 line_id = 0
-monkey_temp = {"inspect" : 0}
+monkey_temp = {"inspect": 0}
 for line in lines:
-#for line in test_inputs:
+    # for line in test_inputs:
     line = line.replace("\n", "")
 
     if line == "":
         monkeys[monkey_id] = monkey_temp
         monkey_id += 1
-        monkey_temp = {"inspect" : 0}
+        monkey_temp = {"inspect": 0}
         line_id = 0
         continue
 
@@ -98,7 +99,8 @@ for i in range(10000):
     for mon in monkeys:
         operation = monkeys[mon]["operation"]
         if operation[6] == "*":
-            ope = lambda a: ((a if (operation[5]) == "old" else int(operation[5])) * (a if operation[7] == "old" else int(operation[7])))
+            ope = lambda a: ((a if (operation[5]) == "old" else int(operation[5])) * (
+                a if operation[7] == "old" else int(operation[7])))
         else:
             ope = lambda a: ((a if operation[5] == "old" else int(operation[5])) + (
                 a if operation[7] == "old" else int(operation[7])))
