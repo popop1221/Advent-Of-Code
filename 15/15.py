@@ -21,11 +21,9 @@ for line in lines:
     beacons.add(bec)
     sensor.append(dic)
 
-x_max = max(x)
-x_min = min(x)
 y = 2000000
 result = 0
-for i in range(-10000000,10000000):
+for i in range(-10000000, 10000000):
     if (i, y) in beacons:
         continue
     for sens in sensor:
