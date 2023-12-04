@@ -11,7 +11,7 @@ with open('test_input.txt') as f:
 inputt = real_input
 
 for line in inputt:
-    pass
+    line = line.replace("\n", "")
 
 print("----- PART 2 -----")
 
