@@ -1,9 +1,12 @@
-with open('input.txt') as f:
-    real_input = f.readlines()
+def evaluate(time, dist):
+    result = 0
+    for i in range(time):
+        if (time - i) * i > dist:
+            result += 1
+    return result
 
-with open('test_input.txt') as f:
-    test_input = f.readlines()
 
-
+print(evaluate(55, 401) * evaluate(99, 1485) * evaluate(97, 2274) * evaluate(93, 1405))
 
 print("----- PART 2 -----")
+print(evaluate(55999793, 401148522741405))
