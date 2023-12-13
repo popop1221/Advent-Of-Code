@@ -9,10 +9,9 @@ with open('test_input.txt') as f:
 
 
 inputt = real_input
-inputt = [line.replace("\n", "") for line in inputt]
 
 for line in inputt:
-    pass
+    line = line.replace("\n", "")
 
 print("----- PART 2 -----")
 
