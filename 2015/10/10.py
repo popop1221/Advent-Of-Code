@@ -1,19 +1,27 @@
-import sys
-sys.setrecursionlimit(150000)
+def conway(old):
+    result = ""
+    prev = "0"
+    count = 0
+    for char in old:
+        if char != prev and count != 0:
+            result += str(count) + prev
+            count = 0
+        prev = char
+        count += 1
+    result += str(count) + prev
+    return result
 
-with open('input.txt') as f:
-    real_input = f.readlines()
+inputt = "1321131112"
 
-with open('test_input.txt') as f:
-    test_input = f.readlines()
+for _ in range(40):
+    inputt = conway(inputt)
 
-
-inputt = real_input
-
-for line in inputt:
-    line = line.replace("\n", "")
+print(len(inputt))
 
 print("----- PART 2 -----")
 
-for line in inputt:
-    pass
+
+for _ in range(10):
+    inputt = conway(inputt)
+
+print(len(inputt))
