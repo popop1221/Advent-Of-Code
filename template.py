@@ -8,7 +8,7 @@ with open('input.txt') as f:
 with open('test_input.txt') as f:
     test_input = f.readlines()
 
-inputt = real_input
+inputt = test_input
 inputt = [line.replace("\n", "") for line in inputt]
 
 for line in inputt:
